@@ -17,14 +17,10 @@ Sé que puede no sonar divertido, pero si recuerdas bien, nunca dije que lo fuer
 Este proyecto seguirá la misma dinámica que cualquier otro proyecto del campus respecto a creación del Makefile, aplicación de la Norma, el control de errores... con las siguientes excepciones:
 
 **Se debe aplicar el *Flujo de Trabajo de Git* al desarrollo.**  
-- El proyecto debe estruturarse y desarrollarse de forma organizada.
-- El repositorio debe contener:
-    - Varias ramas, siendo 2 de ellas la principal (`master`) y la de desarrollo.
-    - Varias *tags* (en versionado semántico) que reflejen estados concretos del proyecto.
-    - Un archivo `.gitignore` con contenido relevante (relevante para el usuario).
+El proyecto debe estruturarse y desarrollarse de forma organizada, haciendo uso de los recursos de Git.
 
-**Está permitido usar cualquier librería.**
-Igualmente, ten cuidado y no le des muchos celos a *Libft*.
+**Está permitido usar cualquier librería.**  
+No obstante, ten cuidado y no le des muchos celos a *Libft*.
 
 
 ## III. Resultados esperados
@@ -57,9 +53,7 @@ Después, configura tu repositorio local:
 - [ ] Añade un remoto a un repositorio vacío en GitHub.
 
 Finalmente:
-- [ ] Crea un alias del comando `git log`.
-
-El comando debería mostrar el resultado de una forma similar a esta:
+- [ ] Crea un alias del comando `git log` que muestre el resultado de una forma similar a esta:
 ```bash
 * 1a2b3c4 (HEAD -> master) Mete-saca del cofre implementado
 | * 5e6f7g8 (develop) Función add_item() corregida
@@ -77,7 +71,7 @@ El comando debería mostrar el resultado de una forma similar a esta:
 
 > *Ahora sí, hora de meterle mano al código.*
 
-Implementa un **programa** que gestione un cofre (`array`) de items.
+Implementa un **programa** que gestione un cofre (`array`) de items; **debe poder usarse para validar el funcionamiento de la librería**, si eso se cumple, sea cual sea la complejidad del programa, será válido.
 
 Esto es un item:
 ```C
@@ -95,15 +89,20 @@ typedef struct s_item
 ```
 
 Dicho programa debe **cumplir** lo siguiente:
-- [ ] Implementa las funciones básicas descritas en el fichero `ft_chest.h`.
+- [ ] Implementa todas funciones descritas en el fichero `ft_chest.h`.
 - [ ] Ejecuta la función `main()` en un fichero `main.c`.
 - [ ] Compila correctamente con el comando `make` y las flags habituales.
 - [ ] El nombre del ejecutable debe ser `ft_chest`.
 
+El repositorio debe contener:
+- [ ] Varias ramas, siendo 2 de ellas la principal (`master`) y la de desarrollo.
+- [ ] Varias *tags* (en versionado semántico) que reflejen estados concretos del proyecto.
+- [ ] Un archivo `.gitignore` con contenido relevante (relevante para el usuario).
+
 > Un pequeño recordatorio: no olvides tener en cuenta los *casos especiales*. ¡Guíate por tu sentido común!
 
-**El resto del código y de ficheros que necesites para el proyecto quedan a tu libre elección**.  
-Plantea una estructura en tu cabeza sobre cómo quieres desarrollar tu proyecto y organiza tu trabajo acorde a esa visión; estructura de carpetas, nombres de ficheros y su contenido... tienes completa libertad (sin contar los requisitos anteriores) para adaptar el *Flujo de Trabajo de Git* a tu propio estilo de desarrollo.
+**El código y los ficheros que necesites para el proyecto quedan a tu libre elección**.  
+Plantea cómo quieres desarrollar tu proyecto y organiza tu trabajo acorde a la estructura de esa visión: cantidad de carpetas, nombres de ficheros y su contenido... tienes completa libertad (sin contar los requisitos anteriores) para adaptar el *Flujo de Trabajo de Git* a tu propio estilo de desarrollo.
 
 
 ### Parte bonus
@@ -113,14 +112,16 @@ Implementa estas 6 funcionalidades nuevas en tu programa:
 - [ ] Ordenar los items por orden inverso al alfabético.
 - [ ] Ordenar los items por cantidad ascendente.
 - [ ] Ordenar los items por cantidad descendente.
-- [ ] Importar un cofre desde un fichero.
-- [ ] Exportar un cofre a un fichero.
+- [ ] Importar un cofre desde un fichero. *
+- [ ] Exportar un cofre a un fichero. *
 
-Los ficheros contendrán los items en formato de `print_chest()`.
+\* Los ficheros contendrán los items en formato de `print_chest()`.
+
+- [ ] Todos los cambios de esta parte deben hacerse en una rama `bonus`.
 
 
 ## Evaluación
 
 Me temo que, *legalmente* hablando, no hay forma de evaluar el proyecto, así que no hay evaluación.
 
-*Sí obstante*, si quieres vacilar sobre *quién tiene la rama más larga*, siempre puedes hablar con otros de tus compañeros, ¡nadie te lo va a impedir!
+*Sí obstante*, si quieres vacilar sobre *quién tiene la rama más larga*, siempre puedes pedírselo a tus compañeros, ¡nadie te lo va a impedir!
